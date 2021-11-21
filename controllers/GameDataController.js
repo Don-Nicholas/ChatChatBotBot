@@ -77,10 +77,10 @@ function getTeamSchedule(req, res) {
 
 function Sample(req, res) {
     let team = req.body.queryResult.parameters.team;
-    // GameSchedule.find({}, function (err, games) {
-    //     console.log(games);
-    // });   
-    console.log(team);
+    GameSchedule.find({opponent: team}, function (err, games) {
+        console.log(games);
+    });   
+    // console.log(team);
 };
 
 exports.processRequest = (req, res) => {
