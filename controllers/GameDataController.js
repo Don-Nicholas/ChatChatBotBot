@@ -75,9 +75,15 @@ function getTeamSchedule(req, res) {
     }
 };
 
+// function Sample(req, res) {
+//     GameSchedule.find({ opponent: team }, function (err, games) {
+
+//     });   
+// };
+
 exports.processRequest = (req, res) => {
 
-    console.log(req.body);
+    console.log(req.body.intent);
     res.json({
         "fulfillmentText": "Hi po",
         "outputContexts": []
