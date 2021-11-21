@@ -78,7 +78,10 @@ function getTeamSchedule(req, res) {
 function Sample(req, res) {
     let team = req.body.queryResult.parameters.team;
     TeamInfo.findOne({}, function (err, info) {
-        console.log(info.description);
+        res.json({
+            "fulfillmentText": info.description,
+            "outputContexts": []
+        });
     });   
     // console.log(team);
 };
@@ -89,10 +92,7 @@ exports.processRequest = (req, res) => {
     // console.log("query text "+req.body.queryResult.intent.displayName);
     const schedule = req.body.queryResult.intent.displayName;
     // console.log("display name "+req.body.intent.displayName);
-    res.json({
-        "fulfillmentText": schedule,
-        "outputContexts": []
-    });
+    
     // if (req.body.result.action == "schedule") {
     //     getTeamSchedule(req, res)
     //     // console.log(req.body.result.action == "schedule");
