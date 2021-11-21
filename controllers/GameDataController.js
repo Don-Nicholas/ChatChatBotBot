@@ -81,8 +81,9 @@ async function Sample(req, res) {
     console.log(games);
 };
 
-exports.processRequest = (req, res) => {
-    Sample(req, res);
+exports.processRequest = async (req, res) => {
+    let games = await GameSchedule.find();  
+    console.log(games);
     // console.log(req.body);
     // console.log("query text "+req.body.queryResult.intent.displayName);
     const schedule = req.body.queryResult.intent.displayName;
