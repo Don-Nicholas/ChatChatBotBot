@@ -78,6 +78,7 @@ function getTeamSchedule(req, res) {
 exports.processRequest = (req, res) => {
 
     console.log(req.body);
+    res.json("hi");
     // if (req.body.result.action == "schedule") {
     //     getTeamSchedule(req, res)
     //     // console.log(req.body.result.action == "schedule");
