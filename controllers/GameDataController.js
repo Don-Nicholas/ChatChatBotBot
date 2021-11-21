@@ -77,8 +77,8 @@ function getTeamSchedule(req, res) {
 
 function Sample(req, res) {
     let team = req.body.queryResult.parameters.team;
-    TeamInfo.find({}, function (err, info) {
-        console.log(info.description);
+    TeamInfo.findOne({}, function (err, info) {
+        console.log(info);
     });   
     // console.log(team);
 };
