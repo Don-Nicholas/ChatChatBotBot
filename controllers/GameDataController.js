@@ -77,13 +77,13 @@ function getTeamSchedule(req, res) {
 
 exports.processRequest = (req, res) => {
 
-    // console.log(req.body);
-    if (req.body.result.action == "schedule") {
-        getTeamSchedule(req, res)
-        // console.log(req.body.result.action == "schedule");
-    }
-    else if (req.body.result.action == "tell.about") {
-        getTeamInfo(req, res)
-        // console.log(req.body.result.action);
-    }
+    console.log(req.body);
+    // if (req.body.result.action == "schedule") {
+    //     getTeamSchedule(req, res)
+    //     // console.log(req.body.result.action == "schedule");
+    // }
+    // else if (req.body.result.action == "tell.about") {
+    //     getTeamInfo(req, res)
+    //     // console.log(req.body.result.action);
+    // }
 };
