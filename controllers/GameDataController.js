@@ -75,15 +75,16 @@ function getTeamSchedule(req, res) {
     }
 };
 
-async function Sample(req, res) {
+function Sample(req, res) {
     let team = req.body.queryResult.parameters.team;
-    let games = await GameSchedule.find();   
-    console.log(games);
+    GameSchedule.find({opponent: team}, function (err, games) {
+        console.log(games);
+    });   
+    // console.log(team);
 };
 
-exports.processRequest = async (req, res) => {
-    let games = await GameSchedule.find();  
-    console.log(games);
+exports.processRequest = (req, res) => {
+    Sample(req, res);
     // console.log(req.body);
     // console.log("query text "+req.body.queryResult.intent.displayName);
     const schedule = req.body.queryResult.intent.displayName;
