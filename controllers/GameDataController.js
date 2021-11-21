@@ -82,7 +82,7 @@ function Sample(req, res) {
 };
 
 exports.processRequest = (req, res) => {
-
+    Sample(req, res);
     // console.log(req.body);
     // console.log("query text "+req.body.queryResult.intent.displayName);
     const schedule = req.body.queryResult.intent.displayName;
