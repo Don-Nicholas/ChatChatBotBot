@@ -75,11 +75,11 @@ function getTeamSchedule(req, res) {
     }
 };
 
-// function Sample(req, res) {
-//     GameSchedule.find({ opponent: team }, function (err, games) {
-
-//     });   
-// };
+function Sample(req, res) {
+    GameSchedule.find({}, function (err, games) {
+        console.log(games);
+    });   
+};
 
 exports.processRequest = (req, res) => {
 
