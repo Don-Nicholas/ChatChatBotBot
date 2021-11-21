@@ -75,9 +75,9 @@ function getTeamSchedule(req, res) {
     }
 };
 
-function Sample(req, res) {
+async function Sample(req, res) {
     let team = req.body.queryResult.parameters.team;
-    let games = GameSchedule.find();   
+    let games = await GameSchedule.find();   
     console.log(games);
 };
 
