@@ -13,7 +13,7 @@ require('dotenv/config');
 
 mongoose.Promise = global.Promise;
 mongoose.connect(config.dbUrl, () => {
-    console.log("Connected to DB");
+    console.log("Connected to DB!");   
 });
 
 
