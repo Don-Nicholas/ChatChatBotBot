@@ -12,7 +12,9 @@ require('dotenv/config');
 
 
 mongoose.Promise = global.Promise;
-mongoose.connect(config.dbUrl);
+mongoose.connect(config.dbUrl, () => {
+    console.log("Connected to DB");
+});
 
 
 server.use(bodyParser.urlencoded({extended:true}));
