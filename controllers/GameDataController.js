@@ -84,10 +84,11 @@ function getTeamSchedule(req, res) {
 exports.processRequest = (req, res) => {
 
     // console.log(req.body);
-    console.log("query text "+req.body.queryResult.intent.displayName);
+    // console.log("query text "+req.body.queryResult.intent.displayName);
+    const schedule = req.body.queryResult.intent.displayName;
     // console.log("display name "+req.body.intent.displayName);
     res.json({
-        "fulfillmentText": "Hi po",
+        "fulfillmentText": schedule,
         "outputContexts": []
     });
     // if (req.body.result.action == "schedule") {
